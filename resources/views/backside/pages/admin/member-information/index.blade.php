@@ -25,7 +25,7 @@
                                 <td class="text-center align-middle">-</td>
                                 <td class="text-center align-middle">-</td>
                                 <td class="text-center align-middle">
-                                    <a href="" class="btn btn-sm btn-secondary">
+                                    <a href="{{ route('admin.manage-member.product-link-view', ['member_id' => 1]) }}" class="btn btn-sm btn-secondary">
                                         <i class="fas fa-box"></i>
                                     </a>
                                     <a href="" class="btn btn-sm btn-info">

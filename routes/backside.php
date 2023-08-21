@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backside\Admin\DashboardAdminController;
 use App\Http\Controllers\Backside\Admin\MemberInformation\ManageMemberController;
+use App\Http\Controllers\Backside\Admin\MemberInformation\MemberProductLinkController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -16,5 +17,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::group(['prefix' => 'manage-member', 'as' => 'manage-member.'], function () {
         Route::get('/', [ManageMemberController::class, 'indexMemberView'])->name('index-view');
         Route::get('/{member_id}/edit', [ManageMemberController::class, 'editMemberView'])->name('edit-view');
+        Route::get('/{member_id}/product-link', [MemberProductLinkController::class, 'memberProductLinkView'])->name('product-link-view');
     });
 });
