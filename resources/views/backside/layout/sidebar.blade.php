@@ -14,12 +14,19 @@
 
                 <li class="list-divider"></li>
 
-                <li class="nav-small-cap"><span class="hide-menu">User Informations</span></li>
+                <li class="nav-small-cap"><span class="hide-menu">Member Information</span></li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('admin.manage-member.index-view') }}" aria-expanded="false">
+                        <i class="fas fa-users"></i>
+                        <span class="hide-menu">Manage Member</span>
+                    </a>
+                </li>
 
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="" aria-expanded="false">
-                        <i class="fas fa-users"></i>
-                        <span class="hide-menu">User</span>
+                        <i class="fas fa-dollar-sign"></i>
+                        <span class="hide-menu">Withdrawal Request</span>
                     </a>
                 </li>
 
