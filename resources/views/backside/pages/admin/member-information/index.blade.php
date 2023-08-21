@@ -28,7 +28,7 @@
                                     <a href="{{ route('admin.manage-member.product-link-view', ['member_id' => 1]) }}" class="btn btn-sm btn-secondary">
                                         <i class="fas fa-box"></i>
                                     </a>
-                                    <a href="" class="btn btn-sm btn-info">
+                                    <a href="{{ route('admin.manage-member.mutation-view', ['member_id' => 1]) }}" class="btn btn-sm btn-info">
                                         <i class="fa fa-dollar-sign"></i>
                                     </a>
                                     <a href="{{ route('admin.manage-member.edit-view', ['member_id' => 1]) }}" class="btn btn-sm btn-success">
