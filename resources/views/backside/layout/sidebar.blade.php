@@ -30,6 +30,17 @@
                     </a>
                 </li>
 
+                <li class="list-divider"></li>
+
+                <li class="nav-small-cap"><span class="hide-menu">Product Information</span></li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('admin.manage-product.index-view') }}" aria-expanded="false">
+                        <i class="fas fa-box"></i>
+                        <span class="hide-menu">Manage Product</span>
+                    </a>
+                </li>
+
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
