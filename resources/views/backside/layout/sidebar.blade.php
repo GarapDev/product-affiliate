@@ -28,6 +28,15 @@
                 </li>
                 <!-- End Member-->
 
+                <!-- Customer -->
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('customer.dashboard') }}" aria-expanded="false">
+                        <i class="fas fa-home"></i>
+                        <span class="hide-menu">Dashboard Customer</span>
+                    </a>
+                </li>
+                <!-- End Customer -->
+
                 <!-- Member-->
                 <li class="list-divider"></li>
 
