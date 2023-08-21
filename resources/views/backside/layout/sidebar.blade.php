@@ -52,6 +52,26 @@
                 </li>
                 <!-- End Member-->
 
+                <!-- Customer -->
+                <li class="list-divider"></li>
+
+                <li class="nav-small-cap"><span class="hide-menu">Customer Feature</span></li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('customer.order-transaction-history-view') }}" aria-expanded="false">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span class="hide-menu">Order Transaction History</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('customer.order-transaction-history-view') }}" aria-expanded="false">
+                        <i class="fas fa-phone"></i>
+                        <span class="hide-menu">Contact Us</span>
+                    </a>
+                </li>
+                <!-- End Customer -->
+
                 <li class="list-divider"></li>
 
                 <li class="nav-small-cap"><span class="hide-menu">Member Information</span></li>

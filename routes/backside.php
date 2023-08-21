@@ -7,6 +7,7 @@ use App\Http\Controllers\Backside\Admin\MemberInformation\MemberMutationControll
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberProductLinkController;
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberWithdrawalRequestController;
 use App\Http\Controllers\Backside\Admin\ProductInformation\ManageProductController;
+use App\Http\Controllers\Backside\Customer\CustomerOrderTransactionHistoryController;
 use App\Http\Controllers\Backside\Member\DashboardMemberController;
 use App\Http\Controllers\Backside\Member\ProductLink\ManageProductLinkController;
 use App\Http\Controllers\Backside\Member\UserFinance\ManageMemberMoneyController;
@@ -64,4 +65,8 @@ Route::group(['prefix' => 'member', 'as' => 'member.'], function () {
             Route::get('/{my_money_id}/member-mutation', [ManageMemberMoneyController::class, 'memberMoneyMutation'])->name('mutation-view');
         });
     });
+});
+
+Route::group(['prefix' => 'customer', 'as' => 'customer.'], function () {
+    Route::get('/order-transaction-history', [CustomerOrderTransactionHistoryController::class, 'customerOrderTransactionHistoryView'])->name('order-transaction-history-view');
 });
