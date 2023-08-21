@@ -7,6 +7,7 @@ use App\Http\Controllers\Backside\Admin\MemberInformation\MemberMutationControll
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberProductLinkController;
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberWithdrawalRequestController;
 use App\Http\Controllers\Backside\Admin\ProductInformation\ManageProductController;
+use App\Http\Controllers\Backside\Admin\SystemSetting\ContactUsSettingController;
 use App\Http\Controllers\Backside\Customer\CustomerAdminContactController;
 use App\Http\Controllers\Backside\Customer\CustomerOrderTransactionHistoryController;
 use App\Http\Controllers\Backside\Customer\DashboardCustomerController;
@@ -42,6 +43,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
     Route::group(['prefix' => 'manage-lead', 'as' => 'manage-lead.'], function () {
         Route::get('/', [ManageLeadsController::class, 'manageLeadsPage'])->name('index-view');
+    });
+
+    Route::group(['prefix' => 'system-setting', 'as' => 'system-setting.'], function () {
+        Route::group(['prefix' => 'contact-us-setting', 'as' => 'contact-us-setting.'], function () {
+            Route::get('/', [ContactUsSettingController::class, 'contactUsSettingView'])->name('edit-view');
+        });
     });
 });
 

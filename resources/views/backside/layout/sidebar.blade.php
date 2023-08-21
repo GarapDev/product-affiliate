@@ -121,6 +121,17 @@
                     </a>
                 </li>
 
+                <li class="list-divider"></li>
+
+                <li class="nav-small-cap"><span class="hide-menu">System Setting</span></li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('admin.system-setting.contact-us-setting.edit-view') }}" aria-expanded="false">
+                        <i class="fas fa-cog"></i>
+                        <span class="hide-menu">Contact Us Setting</span>
+                    </a>
+                </li>
+
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
