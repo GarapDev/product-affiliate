@@ -24,7 +24,7 @@
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('admin.manage-member.withdrawal-request-view') }}" aria-expanded="false">
                         <i class="fas fa-dollar-sign"></i>
                         <span class="hide-menu">Withdrawal Request</span>
                     </a>
