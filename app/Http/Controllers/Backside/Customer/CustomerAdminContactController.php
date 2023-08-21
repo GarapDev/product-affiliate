@@ -15,6 +15,6 @@ class CustomerAdminContactController extends Controller
      */
     public function customerContactAdminView(): View
     {
-        return view();
+        return view('backside.pages.customer.admin-contact-view');
     }
 }

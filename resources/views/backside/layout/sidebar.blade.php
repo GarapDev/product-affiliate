@@ -65,7 +65,7 @@
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ route('customer.order-transaction-history-view') }}" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('customer.contact-us-view') }}" aria-expanded="false">
                         <i class="fas fa-phone"></i>
                         <span class="hide-menu">Contact Us</span>
                     </a>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Backside\Admin\MemberInformation\MemberMutationControll
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberProductLinkController;
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberWithdrawalRequestController;
 use App\Http\Controllers\Backside\Admin\ProductInformation\ManageProductController;
+use App\Http\Controllers\Backside\Customer\CustomerAdminContactController;
 use App\Http\Controllers\Backside\Customer\CustomerOrderTransactionHistoryController;
 use App\Http\Controllers\Backside\Member\DashboardMemberController;
 use App\Http\Controllers\Backside\Member\ProductLink\ManageProductLinkController;
@@ -69,4 +70,5 @@ Route::group(['prefix' => 'member', 'as' => 'member.'], function () {
 
 Route::group(['prefix' => 'customer', 'as' => 'customer.'], function () {
     Route::get('/order-transaction-history', [CustomerOrderTransactionHistoryController::class, 'customerOrderTransactionHistoryView'])->name('order-transaction-history-view');
+    Route::get('/contact-us', [CustomerAdminContactController::class, 'customerContactAdminView'])->name('contact-us-view');
 });
