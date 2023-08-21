@@ -6,9 +6,16 @@
             <ul id="sidebarnav">
 
                 <li class="sidebar-item selected">
-                    <a class="sidebar-link" href="" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('admin.dashboard') }}" aria-expanded="false">
                         <i class="fas fa-home"></i>
                         <span class="hide-menu">Dashboard Admin</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('member.dashboard') }}" aria-expanded="false">
+                        <i class="fas fa-home"></i>
+                        <span class="hide-menu">Dashboard Member</span>
                     </a>
                 </li>
 

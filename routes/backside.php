@@ -7,6 +7,7 @@ use App\Http\Controllers\Backside\Admin\MemberInformation\MemberMutationControll
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberProductLinkController;
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberWithdrawalRequestController;
 use App\Http\Controllers\Backside\Admin\ProductInformation\ManageProductController;
+use App\Http\Controllers\Backside\Member\DashboardMemberController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -36,4 +37,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::group(['prefix' => 'manage-lead', 'as' => 'manage-lead.'], function () {
         Route::get('/', [ManageLeadsController::class, 'manageLeadsPage'])->name('index-view');
     });
+});
+
+/*
+|--------------------------------------------------------------------------
+| Member Route Group Section
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'member', 'as' => 'member.'], function () {
+    Route::get('/dashboard', [DashboardMemberController::class, 'dashboardAdminView'])->name('dashboard');
 });
