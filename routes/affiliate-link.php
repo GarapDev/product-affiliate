@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Affiliate\CheckoutFormController;
 use App\Http\Controllers\Affiliate\ShowProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['prefix' => 'a', 'as' => 'a.'], function () {
     Route::prefix('{affiliate_code}')->group(function () {
-        Route::get('/', [ShowProductController::class, 'showRelatedProduct'])->name('show-related-product');
+        Route::get('/', [ShowProductController::class, 'showRelatedProductView'])->name('show-related-product-view');
+        Route::get('/checkout-form', [CheckoutFormController::class, 'checkoutFormView'])->name('checkout-form-view');
     });
 });

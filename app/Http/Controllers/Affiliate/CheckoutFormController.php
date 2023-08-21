@@ -6,15 +6,15 @@ use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
-class ShowProductController extends Controller
+class CheckoutFormController extends Controller
 {
     /**
-     * display related product page.
+     * display checkout form page.
      *
      * @return View
      */
-    public function showRelatedProductView(): View
+    public function checkoutFormView(): View
     {
-        return view('affiliate.show-product');
+        return view('affiliate.show-checkout-form');
     }
 }

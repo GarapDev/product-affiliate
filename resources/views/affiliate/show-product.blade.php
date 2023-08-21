@@ -26,7 +26,7 @@
                             </button>
                         </div>
                     </form> --}}
-                    <a href="" class="btn btn-success text-white my-3">Buy Product</a>
+                    <a href="{{ route('a.checkout-form-view', ['affiliate_code' => 'z123ar']) }}" class="btn btn-success text-white my-3">Buy Product</a>
                 </div>
             </div>
         </div>
