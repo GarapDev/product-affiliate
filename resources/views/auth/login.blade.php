@@ -1,5 +1,6 @@
 @extends('auth.layout.app')
 
+@section('page-title', 'AZ Product - Login Page')
 
 @section('content')
     <div class="container">
@@ -44,7 +45,7 @@
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="d-grid">
-                                                            <a href="" class="btn btn-warning text-white">Register as Customer</a>
+                                                            <a href="{{ route('auth.register-customer-view') }}" class="btn btn-warning text-white">Register as Customer</a>
                                                             <div class="my-3"></div>
                                                             <a href="{{ route('auth.register-member-view') }}" class="btn btn-success text-white">Register as Member</a>
                                                         </div>

@@ -17,4 +17,14 @@ class RegisterController extends Controller
     {
         return view('auth.register-member');
     }
+
+    /**
+     * display customer register page.
+     *
+     * @return View
+     */
+    public function customerRegisterView(): View
+    {
+        return view('auth.register-customer');
+    }
 }
