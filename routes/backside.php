@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backside\Admin\DashboardAdminController;
+use App\Http\Controllers\Backside\Admin\LeadsInformation\ManageLeadsController;
 use App\Http\Controllers\Backside\Admin\MemberInformation\ManageMemberController;
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberMutationController;
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberProductLinkController;
@@ -30,5 +31,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('/create', [ManageProductController::class, 'createProductForm'])->name('create-view');
         Route::get('/{product_id}/detail-product', [ManageProductController::class, 'detailProductView'])->name('detail-product-view');
         Route::get('/{product_id}/edit', [ManageProductController::class, 'editProductView'])->name('edit-product-view');
+    });
+
+    Route::group(['prefix' => 'manage-lead', 'as' => 'manage-lead.'], function () {
+        Route::get('/', [ManageLeadsController::class, 'manageLeadsPage'])->name('index-view');
     });
 });
