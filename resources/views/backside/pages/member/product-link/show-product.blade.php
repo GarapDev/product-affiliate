@@ -1,6 +1,6 @@
-@extends('backside.layout.app', ['breadcrumb_heading' => 'User Profile', 'breadcrumb_sections' => ['User Profile']])
+@extends('backside.layout.app', ['breadcrumb_heading' => 'Product Link Information', 'breadcrumb_sections' => ['Product Link Information', 'Manage Product Link', 'Show Product']])
 
-@section('page-title', 'AZ Product - User Profile')
+@section('page-title', 'AZ Product - Show Product')
 
 @section('content')
 
@@ -9,7 +9,11 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex align-items-center justify-content-between">
-                    <h4 class="card-title">User Profile</h4>
+                    <h4 class="card-title">Show Product</h4>
+                    <a href="{{ route('member.product-link.index-view') }}" class="btn btn-secondary">
+                        <i class="fa fa-arrow-left"></i>
+                        {{ __('Back') }}
+                    </a>
                 </div>
                 @if(session()->has('errors'))
                 <div class="alert alert-danger mt-3">
@@ -26,49 +30,44 @@
                     <div class="form-body">
                         <div class="row mt-3">
                             <div class="col-md-12">
-                                <label class="form-label">Name <span class="text-danger">*</span> </label>
+                                <label class="form-label">Product Name </label>
                                 <div class="form-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Name" name="name" value="{{ old('name') }}" required>
+                                    <input type="text" class="form-control" placeholder="Name" name="name" value="{{ old('product_name') }}" disabled>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <label class="form-label">Email <span class="text-danger">*</span> </label>
+                                <label class="form-label">Product Description </label>
                                 <div class="form-group mb-3">
-                                    <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}" required>
+                                    <textarea placeholder="Product Description" class="form-control" name="description" rows="5" disabled>{{ old('description') }}</textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-3">
                             <div class="col-md-12">
-                                <label class="form-label">Phone Number <span class="text-danger">*</span> </label>
+                                <label class="form-label">Product Price </label>
                                 <div class="form-group mb-3">
-                                    <input type="tel" class="form-control" placeholder="Phone Number" name="phone_number" value="{{ old('phone_number') }}" required>
+                                    <input type="number" class="form-control" placeholder="Product Price" name="price" value="{{ old('price') }}" disabled>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-3">
                             <div class="col-md-12">
-                                <label class="form-label">New Password <span class="text-danger">*</span> </label>
+                                <label class="form-label">Product Image </label>
                                 <div class="form-group mb-3">
-                                    <input type="password" class="form-control" placeholder="New Password" name="new_password" required>
+                                    <img src="{{ asset('dummy-assets/no-image.png') }}" class="img-fluid mb-3" style="width: 250px; height: 200px;">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-3">
                             <div class="col-md-12">
-                                <label class="form-label">Bank <span class="text-danger">*</span> </label>
+                                <label class="form-label">Product Commission </label>
                                 <div class="form-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Bank" name="bank" value="{{ old('bank') }}" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label class="form-label">Bank Account Number <span class="text-danger">*</span> </label>
-                                <div class="form-group mb-3">
-                                    <input type="number" class="form-control" placeholder="Bank Account Number" name="bank_account_number" value="{{ old('bank_account_number') }}" required>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="product_price">%</span>
+                                        <input type="number" class="form-control" placeholder="Commission (Percent)" aria-describedby="product_price" disabled>
+                                    </div>
                                 </div>
                             </div>
                         </div>

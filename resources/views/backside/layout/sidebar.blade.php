@@ -12,6 +12,7 @@
                     </a>
                 </li>
 
+                <!-- Member-->
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('member.dashboard') }}" aria-expanded="false">
                         <i class="fas fa-home"></i>
@@ -25,6 +26,20 @@
                         <span class="hide-menu">User Profile</span>
                     </a>
                 </li>
+                <!-- End Member-->
+
+                <!-- Member-->
+                <li class="list-divider"></li>
+
+                <li class="nav-small-cap"><span class="hide-menu">Product Link Information</span></li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('member.product-link.index-view') }}" aria-expanded="false">
+                        <i class="fas fa-link"></i>
+                        <span class="hide-menu">Product Link</span>
+                    </a>
+                </li>
+                <!-- End Member-->
 
                 <li class="list-divider"></li>
 
