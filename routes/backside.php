@@ -8,6 +8,7 @@ use App\Http\Controllers\Backside\Admin\MemberInformation\MemberProductLinkContr
 use App\Http\Controllers\Backside\Admin\MemberInformation\MemberWithdrawalRequestController;
 use App\Http\Controllers\Backside\Admin\ProductInformation\ManageProductController;
 use App\Http\Controllers\Backside\Member\DashboardMemberController;
+use App\Http\Controllers\Backside\Member\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -46,4 +47,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 */
 Route::group(['prefix' => 'member', 'as' => 'member.'], function () {
     Route::get('/dashboard', [DashboardMemberController::class, 'dashboardAdminView'])->name('dashboard');
+    Route::get('/user-profile', [UserProfileController::class, 'userProfileView'])->name('user-profile');
 });

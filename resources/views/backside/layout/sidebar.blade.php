@@ -19,6 +19,13 @@
                     </a>
                 </li>
 
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('member.user-profile') }}" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                        <span class="hide-menu">User Profile</span>
+                    </a>
+                </li>
+
                 <li class="list-divider"></li>
 
                 <li class="nav-small-cap"><span class="hide-menu">Member Information</span></li>
