@@ -144,6 +144,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @include('util.toast')
     @include('util.sweet-alert-delete')
+    @include('util.sweet-alert-withdraw')
 </body>
 
 </html>

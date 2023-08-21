@@ -9,6 +9,7 @@ use App\Http\Controllers\Backside\Admin\MemberInformation\MemberWithdrawalReques
 use App\Http\Controllers\Backside\Admin\ProductInformation\ManageProductController;
 use App\Http\Controllers\Backside\Member\DashboardMemberController;
 use App\Http\Controllers\Backside\Member\ProductLink\ManageProductLinkController;
+use App\Http\Controllers\Backside\Member\UserFinance\ManageMemberMoneyController;
 use App\Http\Controllers\Backside\Member\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -55,5 +56,12 @@ Route::group(['prefix' => 'member', 'as' => 'member.'], function () {
         Route::get('/create-product-link', [ManageProductLinkController::class, 'generateProductLinkView'])->name('create-view');
         Route::get('/{product_link_id}/edit', [ManageProductLinkController::class, 'editProductLinkView'])->name('edit-product-link-view');
         Route::get('/{product_link_id}/{product_id}/show-related-product', [ManageProductLinkController::class, 'showRelatedProductView'])->name('show-related-product');
+    });
+
+    Route::group(['prefix' => 'member-finance', 'as' => 'member-finance.'], function () {
+        Route::group(['prefix' => 'my-money', 'as' => 'my-money.'], function () {
+            Route::get('/', [ManageMemberMoneyController::class, 'memberMoneyView'])->name('index-view');
+            Route::get('/{my_money_id}/member-mutation', [ManageMemberMoneyController::class, 'memberMoneyMutation'])->name('mutation-view');
+        });
     });
 });

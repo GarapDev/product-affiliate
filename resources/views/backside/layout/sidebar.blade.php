@@ -39,6 +39,17 @@
                         <span class="hide-menu">Product Link</span>
                     </a>
                 </li>
+
+                <li class="list-divider"></li>
+
+                <li class="nav-small-cap"><span class="hide-menu">User Finance Information</span></li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('member.member-finance.my-money.index-view') }}" aria-expanded="false">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span class="hide-menu">My Money</span>
+                    </a>
+                </li>
                 <!-- End Member-->
 
                 <li class="list-divider"></li>

@@ -46,8 +46,8 @@
                             <tr>
                                 <th class="text-center align-middle">No</th>
                                 <th class="text-center align-middle">Product Name</th>
-                                <th class="text-center align-middle">Image</th>
-                                <th class="text-center align-middle">Price</th>
+                                <th class="text-center align-middle">Link</th>
+                                <th class="text-center align-middle">Commission (%)</th>
                                 <th class="text-center align-middle">Action</th>
                             </tr>
                         </tfoot>

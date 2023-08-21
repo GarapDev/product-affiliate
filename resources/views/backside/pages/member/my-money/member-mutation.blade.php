@@ -1,4 +1,4 @@
-@extends('backside.layout.app', ['breadcrumb_heading' => 'Member Information', 'breadcrumb_sections' => ['Member Information', 'Manage Member', 'Member Mutation']])
+@extends('backside.layout.app', ['breadcrumb_heading' => 'User Finance Information', 'breadcrumb_sections' => ['User Finance Information', 'My Money', 'Member Mutation']])
 
 @section('page-title', 'AZ Product - Member Mutation')
 
